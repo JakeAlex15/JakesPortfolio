@@ -1,7 +1,7 @@
 import React from "react";
 import { GameBody } from "./Styled";
 
-function FaceMatching() {
+function startGame() {
 return (
 <>
 <div>
@@ -23,10 +23,9 @@ return (
 
 let numberOfFaces = 5;
 
-function generateFaces(){
-    let theLeftSide = document.getElementById('leftSide');
-    let theRightSide = document.getElementById('rightSide');
-
+function generateFaces(event){
+    const theLeftSide = document.getElementById('leftSide');
+    const theRightSide = document.getElementById('rightSide');
     for (let i = 0; i < numberOfFaces; i++) {
         let face = document.createElement('img');
         const randomTop = Math.floor((Math.random() * 400) + 1);
@@ -34,15 +33,14 @@ function generateFaces(){
         face.style.top = randomTop + 'px';
         face.style.left = randomLeft + 'px';
         face.src = 'images/smile.png';
-        // console.log(theLeftSide)
-        // theLeftSide.appendChild(face);
+        theLeftSide.appendChild(face);
     }
-
     const leftSideImages = theLeftSide.cloneNode(true);
     leftSideImages.removeChild(leftSideImages.lastChild);
     theRightSide.appendChild(leftSideImages);
     theLeftSide.lastChild.addEventListener('click' , nextLevel);
-    document.body.addEventListener('click', gameOver);
+    document.body.addEventListener('click', gameOver, true); //whenever anything within the body is clicked, the gameOver function runs. Fix is to have the gameOver function run when anything BUT the extra smiley (last child) is clicked. Otherwise, just run the nectLevel function
+    // theLeftSide.firstElementChild.addEventListener('click' , gameOver);
 }
 
 function nextLevel(event) { 
@@ -56,14 +54,14 @@ function nextLevel(event) {
     while (theRightSide.firstElementChild) {
         theRightSide.removeChild(theRightSide.firstChild);
     }
-    generateFaces(theLeftSide, theRightSide, 5);
+    generateFaces();
 }
 
-function gameOver() {
+function gameOver(event) {
     const theLeftSide = document.getElementById('leftSide');
-    alert('Game Over!');
-    document.body.removeEventListener(gameOver);
-    theLeftSide.lastChild.removeEventListener(nextLevel);
+    alert('Try Again!');
+    theLeftSide.lastChild.removeEventListener('',nextLevel);
+    document.body.removeEventListener('',gameOver);
 } 
 
-export default FaceMatching;
+export default startGame;

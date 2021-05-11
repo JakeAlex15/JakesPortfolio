@@ -46,7 +46,7 @@ a {
    padding: 1em;
  }
 
- img {
+ /* img {
   padding: 3px; 
   width: 600px;
   height: 22rem; 
@@ -59,7 +59,7 @@ a {
 img:hover {
   box-shadow: 0 0 5px 5px rgb(79, 0, 116);
   transition: 0.4s;
-}
+} */
 
  .jumbotron { 
   height: 627px;
@@ -304,6 +304,10 @@ img:hover {
     color: black;
     margin: 1rem;
     padding: auto;
+  }
+
+  img {
+    position: absolute;
   }
 
   .button-div {
