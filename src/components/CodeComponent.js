@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Link } from "react-router-dom";
 import colorthumb from './colorthumb.png';
-import matchthumb from './matchthumb.png';
+import snake from './snake.png'
 import { GameBody, GameTitle, GameSubs, Navbar, NavA, NavUl, NavLi, H1, BioDiv, Bio, Img, GameContainer, GameCaptions } from './Styled';
 
 
@@ -37,14 +37,12 @@ function CodePage () {
         </GameCaptions>
       <div>
       <a href="https://github.com/JakeAlex15/Face-Match/blob/main/matching-game.html" target="_blank">
-          <Img class="match-thumb-png" src={matchthumb}/>
-          <GameSubs> Face Match </GameSubs>
+          <Img class="snake-png" src={snake}/>
+          <GameSubs> Classic Snake </GameSubs>
         </a>
       </div>
       <GameCaptions> 
-          Face Match is the more difficult of the two games. Face Match does not
-          have comments explaining the javascript, but the Color Guess comments should give you a good introduction of how 
-          the basic functions work. 
+          Snake is the more difficult of the two games to create. Snake uses slightly more advanced concepts, but I did try to keep it as simple as possible. This game can be created more efficiently by cutting out the simpler aspects, but will inheritely lose the beginner aspects of Javascript.
           <br /> <br />(Difficulty: 2/10)
         </GameCaptions>
       </GameContainer>

@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Link } from "react-router-dom";
 import colorthumb from './colorthumb.png';
 import matchthumb from './matchthumb.png';
+import snake from './snake.png'
 import { GameBody, GameTitle, GameSubs, Navbar, NavA, NavUl, NavLi, H1, BioDiv, Bio, Img, GameContainer, GameCaptions } from './Styled';
 
 function GamePage() {
@@ -32,14 +33,21 @@ function GamePage() {
           <GameSubs> Color Guess </GameSubs>
         </Link>
     </div>
-    <GameCaptions> Color Guess is a very simple vanilla javascript game. You will click the button to start the game and the computer will prompt you for a color. Guess the correct color to win the game!</GameCaptions>
+    <GameCaptions> 
+      Color Guess is a very simple vanilla javascript game. You will click the button to start the game 
+      and the computer will prompt you for a color. Guess the correct color to win the game!
+    </GameCaptions>
     <div class="face-match-game" id="face-match-thumb">
-        <Link to="face-match" target="_blank">
-          <Img class="match-thumb-png" src={matchthumb}/>
-          <GameSubs> Face Match </GameSubs> 
+        <Link to="snake" target="_blank">
+          <Img class="snake-png" src={snake}/>
+          <GameSubs> Classic Snake </GameSubs> 
         </Link>
     </div>
-    <GameCaptions> Face Match has a very elementary premise. You will be presented with faces on both sides of the screen. Click the extra face on the left side of the screen to add more. See how long you can go for!</GameCaptions>
+    <GameCaptions> 
+        Snake is an effortless and retro game beloved by millions ever since gaming became more mainstream. 
+        Due to the age of the "Snake" idea, it is also a very uncomplicated game to create. Personally, 
+        I am relatively new to React, which is why I decided to create a very simple 'React-style' game.
+    </GameCaptions>
     </GameContainer>
     </>
     </GameBody>

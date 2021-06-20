@@ -1,5 +1,5 @@
 * {
-  font-family: 'Exo 2', sans-serif;
+ 
   scroll-behavior: smooth;
 }
 
@@ -46,7 +46,7 @@ a {
    padding: 1em;
  }
 
- /* img {
+ img {
   padding: 3px; 
   width: 600px;
   height: 22rem; 
@@ -54,14 +54,15 @@ a {
   justify-content: space-between;
   border: 3px solid black;
   margin: auto;
+  cursor: pointer;
 }
 
 img:hover {
   box-shadow: 0 0 5px 5px rgb(79, 0, 116);
   transition: 0.4s;
-} */
+}
 
- .jumbotron { 
+.jumbotron { 
   height: 627px;
   background-color: red;
   text-shadow: #444 0 1px 1px;
@@ -285,6 +286,12 @@ img:hover {
     font-size: 4rem;
   }
 
+  .menu-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+  }
+
   .specials-title {
     margin-top: -2rem;
     font-size: 2.5rem;
@@ -294,9 +301,117 @@ img:hover {
     display: none;
   }
 
+  .btn-container {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    margin: 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: 'Cherry Cream Soda', cursive;
+  }
+
+  .filter-btn:hover {
+    background-color: rgba(34, 248, 130, 0.603);
+    transition: 0.3s;
+    color: black;
+  }
+
+  .section-center {
+    width: 90vw;
+    margin: 5rem 5rem;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 3rem;
+    justify-items: center;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 500px 500px 500px;
+  }
+
+  .opac {
+    background-color: rgba(247, 247, 247, 0.452);
+    padding: 0.5rem;
+  }
+
+  .hours {
+    color: red;
+    font-family: 'Cherry Cream Soda', cursive;
+  }
+
+  .photo {
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+    border: 0.25rem solid black;
+  }
+
+  .photo:hover {
+    transition: 0.2s;
+    border: 0.25rem solid rgba(26, 199, 104, 0.603);
+    box-shadow: none;
+  }
+
+  .item-text {
+    margin-bottom: 0;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    text-shadow: none;
+  }
+
+  .item-info header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted black;
+    align-items: start;
+  }
+  .item-info h4 {
+    margin-bottom: 0.5rem;
+  }
+  /* Snake Game Styling */
+  
+  .game-area {
+    position: relative;
+    margin: 50px auto;
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    top: 4rem;
+  }
+  
+  .snake-dot {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color: black;
+    border: 1px solid white;
+  }
+  
+  .snake-food {
+    position: absolute;
+    width: 2%;
+    height: 2%;
+    background-color: red;
+    border: 1px solid white;
+    z-index: 1;
+  }
+
   /* Face Match Styling */
 
-  .faceMatchIntructions {
+  /* .faceMatchIntructions {
     display: flex;
     font-size: 1rem;
     align-items: center;
@@ -336,7 +451,7 @@ img:hover {
   #rightSide {
       left: 720px;
       border-left: 2px solid black;
-  }
+  } */
   
           /* MOBILE SCREENS */
 

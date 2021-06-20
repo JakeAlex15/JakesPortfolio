@@ -337,16 +337,22 @@ export const Instructions = styled.h3`
 // REVIEW Menu Stylings
 
 export const MenuBody = styled.body`
-    background-color: rgb(221, 239, 240);
-    height: 100vh;
+background-image:
+linear-gradient(45deg, #ccc 25%, transparent 25%), 
+linear-gradient(135deg, #ccc 25%, transparent 25%),
+linear-gradient(45deg, transparent 75%, #ccc 75%),
+linear-gradient(135deg, transparent 75%, #ccc 75%);
+background-size: 90px 90px; /* Must be a square */
+background-position:0 0, 45px 0, 45px -45px, 0px 45px; /* Must be half of one side of the square */
+    height: 180rem;
+    background-color: white;
 `;
 
 export const MenuNav = styled.nav`
-background-color: hsl(205, 86%, 17%);
+background-color: red;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-border: 2px rgb(21, 70, 109) solid;
 height: 4rem;
 `;
 
@@ -365,10 +371,9 @@ justify-content: space-around;
 export const MenuA = styled.a`
 font-size: 2rem;
 display: flex;
-color: #c59d5f;
+color: white;
 margin: 0 10rem 0 10rem;
-font-family: 'Roboto', sans-serif;
-// REVIEW text-decoration: underline; HOVER
+font-family: 'Cherry Cream Soda', cursive;
 `;
 
 export const TitleDiv = styled.div`
@@ -377,12 +382,12 @@ text-align: center;
 `;
 
 export const MenuTitle = styled.h1`
-    color: hsl(205, 86%, 17%);
+    color: red;
     text-align: center;
     font-size: 4rem;
     text-shadow: none;
     margin: 2rem 1rem 1rem 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cherry Cream Soda', cursive;
 `;
 
 export const SpecialsTitle = styled.h2`
@@ -395,8 +400,8 @@ text-shadow: none;
 
 export const Underlines = styled.div`
 width: 12rem;
-  height: 0.25rem;
-  background: #c59d5f;
+  height: 0.75rem;
+  background-image: linear-gradient(to right, rgba(34, 248, 130, 0.603), rgba(34, 248, 130, 0.603), gray 50%, red, red);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
@@ -436,6 +441,28 @@ border: 0.25rem solid #c59d5f;
 
 export const MenuSection = styled.section`
 padding: 3rem 0;
+`;
+
+export const MenuImage = styled.img`
+padding: 2px;
+height: auto; 
+width: 100px; 
+display: flex;  
+justify-content: space-between;
+border: 2px solid black;
+margin: auto;
+&:hover {
+    box-shadow: 0 0 5px 5px rgb(255, 208, 0);
+    transition: 0.4s;
+}
+    @media only screen and (max-width: 480px) {
+        height: 13rem;
+        width: 20rem;
+    }
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+        height: 20rem;
+        width: 30rem;
+    }
 `;
 
 // BREAKPOINTS
