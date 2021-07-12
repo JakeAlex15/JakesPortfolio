@@ -381,6 +381,10 @@ img:hover {
   .item-info h4 {
     margin-bottom: 0.5rem;
   }
+
+  .see-menu-btn {
+    height: 1.5rem !important;
+  }
   /* Snake Game Styling */
   
   .game-area {

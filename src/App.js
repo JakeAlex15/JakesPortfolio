@@ -19,7 +19,6 @@ function App() {
             <Route path='/menu-home' component={MenuHome} />
             <Route path='/code-page' component={CodePage} />
             <Route path='/color-guess' component={ColorGuess} />
-            
             <Route path='/js-games' component={Games} />
             <Route path='/game-page' component={GamePage} />
             <Route path='/snake' component={SnakeGame} />
@@ -27,6 +26,5 @@ function App() {
           </Switch>
     );
 }
-
 
 export default App;
