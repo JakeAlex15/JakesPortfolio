@@ -1,7 +1,9 @@
 import React from 'react';
-import displayMenuButtons from './DisplayMenuButtons';
-import displayMenuItems from './DisplayMenuItems';
+// import displayMenuButtons from './DisplayMenuButtons';
+// import displayMenuItems from './DisplayMenuItems';
 import menu from './MenuArray';
+
+// KEEP COMMENTED REVIEW
 
 // const menu = [
 //     {
@@ -98,11 +100,16 @@ import menu from './MenuArray';
   // };
   // loadItems();
   
-  const seeMenu = () => {
-    displayMenuItems(menu);
-    displayMenuButtons();
-  }
+  // const seeMenu = () => {
+  //   displayMenuItems(menu);
+  //   displayMenuButtons();
+  // }
   
+
+
+
+//  UNCOMMENT REVIEW
+
   // function displayMenuItems(menuItems) {
   //   const sectionCenter = document.querySelector('.section-center');
   //   let displayMenu = menuItems.map(function(item) {
@@ -159,4 +166,4 @@ import menu from './MenuArray';
   // });
   // }
 
-  export default seeMenu; //displayMenuItems;
+  // export default displayMenuItems; //seeMenu;

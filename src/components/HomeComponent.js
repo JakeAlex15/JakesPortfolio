@@ -52,16 +52,16 @@ import '../styles.css';
               </p>
           </Link>
         </div>
-        <div class="project3">
+        {/* <div class="project3">
           <Link to="/menu-home" target="_blank">
-            <img class="image-filler" src="/images/JakesFamous.png" />
+            <img class="image-filler" src="/images/DrunkenDiner.png" />
             <p class="project-subtitles"> 
               <span>
-                Jake's Famous Diner
+                Drunken Diner
               </span>
               </p>
           </Link>
-        </div>
+        </div> */}
         </div> 
       </div>
       <div class="resume-container">

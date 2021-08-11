@@ -36,7 +36,7 @@ function CodePage () {
           <br /> <br />(Difficulty: 1/10)
         </GameCaptions>
       <div>
-      <a href="https://github.com/JakeAlex15/Face-Match/blob/main/matching-game.html" target="_blank">
+      <a href="https://github.com/JakeAlex15/Classic-Snake" target="_blank">
           <Img class="snake-png" src={snake}/>
           <GameSubs> Classic Snake </GameSubs>
         </a>
