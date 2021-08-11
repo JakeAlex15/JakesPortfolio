@@ -105,6 +105,7 @@ import menu from './MenuArray';
   //   displayMenuButtons();
   // }
   
+<<<<<<< HEAD
 
 
 
@@ -129,41 +130,66 @@ import menu from './MenuArray';
   //   displayMenu = displayMenu.join("");
   //   sectionCenter.innerHTML = displayMenu
   // };
+=======
+  function displayMenuItems(menuItems) {
+    const sectionCenter = document.querySelector('.section-center');
+    let displayMenu = menuItems.map(function(item) {
+      return `<article class="menu-item">
+        <img src=${item.img} class="photo" alt=${item.title} />
+        <div class="item-info">
+          <header>
+          <h4>${item.title}</h4>
+          <h4 class="price"> $${item.price}</h4>
+          </header>
+          <p class="item-text">
+            ${item.desc}
+          </p>
+        </div>
+      </article>`;
+    });
+    displayMenu = displayMenu.join("");
+    sectionCenter.innerHTML = displayMenu
+  };
+>>>>>>> c16b78a5bd7551fbacc05d2071dc382026529d91
   
  
-  // function displayMenuButtons() {
-  //   const container = document.querySelector('.btn-container');
-  //   const categories = menu.reduce(function(values, item) {
-  //     if(!values.includes(item.category)) {
-  //       values.push(item.category);
-  //     }
-  //     return values
-  //   },
-  //     ['all']
-  //   );
-  //   const categoryBtns = categories.map(function(category) {
-  //     return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
-  //   })
-  //   .join("");
-  //   container.innerHTML = categoryBtns;
-  //   const filterBtns = document.querySelectorAll('.filter-btn');
+  function displayMenuButtons() {
+    const container = document.querySelector('.btn-container');
+    const categories = menu.reduce(function(values, item) {
+      if(!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values
+    },
+      ['all']
+    );
+    const categoryBtns = categories.map(function(category) {
+      return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
+    })
+    .join("");
+    container.innerHTML = categoryBtns;
+    const filterBtns = document.querySelectorAll('.filter-btn');
     
-  //   //filter items
-  // filterBtns.forEach(function(btn) {
-  //   btn.addEventListener('click', function(e) {
-  //     const category = e.currentTarget.dataset.id;
-  //     const menuCategory = menu.filter(function(menuItem) {
-  //       if(menuItem.category === category) {
-  //         return menuItem;
-  //       };
-  //     });
-  //       if(category === 'all') {
-  //         displayMenuItems(menu);
-  //     } else {
-  //         displayMenuItems(menuCategory);
-  //     }
-  //   });
-  // });
-  // }
+    //filter items
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function(menuItem) {
+        if(menuItem.category === category) {
+          return menuItem;
+        };
+      });
+        if(category === 'all') {
+          displayMenuItems(menu);
+      } else {
+          displayMenuItems(menuCategory);
+      }
+    });
+  });
+  }
 
+<<<<<<< HEAD
   // export default displayMenuItems; //seeMenu;
+=======
+  export default displayMenuItems; //seeMenu;
+>>>>>>> c16b78a5bd7551fbacc05d2071dc382026529d91
